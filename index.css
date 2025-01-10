@@ -173,3 +173,12 @@ footer p a {
 #copyRight a {
     color: #ff9a6c;
 }
+
+.voltar {
+    color: #FF725E;
+    position: absolute; /* POSIÇÃO ABSOLUTA NA PAGINA  */
+    top: 90%;
+    left: 50%;
+    text-decoration:underline;
+    cursor: pointer;
+}
