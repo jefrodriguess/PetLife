@@ -1,6 +1,6 @@
 /* * = APLICA ESTILO A TODA PAGINA, PARA TODOS NAVEGADORES */
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* RETIRAR BORDA PADRÃO DO NAVEGADOR  */
     font-family: 'Montserrat', sans-serif;  
     margin: 0; 
     padding: 0;
@@ -12,16 +12,16 @@ body{
 
 header {
     background-color: #FF9A6C; 
-    display: flex;  /* EXIBIÇÃO FLEXIVEL */
+    display: flex;  /* EXIBIÇÃO FLEXIVEL NA HORIZONTAL*/
     align-items: center; /* ALINHAMENTO DOS ITENS: VERTICAL  */
-    justify-content: space-between; /* JUSTIFICAR CONTEUDO: ORIZONTAL */
+    justify-content: space-between; /* JUSTIFICAR CONTEUDO: HORIZONTAL */
     padding-left: 80px;
     padding-right: 80px;
     padding-top: 24px;
     padding-bottom: 24px;
 }
 
-header a { /* EDITAR BLOCO DENTRO DE OUTRO BLOCO: "A" DENTRO DE "HEADER"*/
+header nav a { /* EDITAR BLOCO DENTRO DE OUTRO BLOCO: "A" DENTRO DE "HEADER"*/
     color: #ffff;
     font-weight: 600; /* PESO DA FONTE/NEGRITO */
     padding: 32px; /* ESPAÇO INTERNO NOS ITENS */
@@ -33,7 +33,7 @@ header a { /* EDITAR BLOCO DENTRO DE OUTRO BLOCO: "A" DENTRO DE "HEADER"*/
     align-items: center;
     gap: 32px; /* ESPAÇO ENTRE OS ITENS */
     padding: 24px 80px 128px 80px;
-    position: relative; /* POSIÇÃO RELATIVA AO BLOCO INÍCIO  */
+    position: relative ; /* POSIÇÃO RELATIVA AO BLOCO INÍCIO  */
 }
 
 h1, 
@@ -54,17 +54,13 @@ h2 {
     border-radius: 8px; /* RAIO DA BORDA: ARREDONDADO  */
     color: #FFFFFF;
     text-decoration: none;
-
 }
 
 .botao-transparente {
     background-color: transparent;
     padding: 16px 32px; /* ESPAÇO INTERNO; VERTICAL E HORIZONTAL  */
-    border-radius: 8px; /* RAIO DA BORDA: ARREDONDADO  */
-    font-weight: 600;
     color: #FF725F;
     text-underline-offset: 4px;
-
 }
 
 .absolute {
@@ -72,6 +68,108 @@ h2 {
     bottom: 0;
     left: 0;
     width: 100%;
-    z-index:-1;
+    z-index: -1; /* PROFUNDIDADE  */
+}
 
+#clinica{
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 64px 80px;
+}
+
+#clinica ul li {
+    margin-bottom: 16px;
+    margin-left: 32px;
+}
+
+#farmacia {
+    padding: 64px 80px;
+    text-align: center;
+}
+
+#farmacia img {
+    margin: 64px;
+}
+
+#farmacia .paragrafo {
+    max-width: 950px; /* LARGURA MAXIMA  */
+    margin: 0 auto; /* CAUCULAR AUTOMATICAMENTE A MARGEM  */
+}
+
+#duvidas {
+    display: flex;
+    align-items: center; /* ALINHAMENTO DOS ITENS: VERTICAL  */
+    gap: 32px; /* ESPAÇO ENTRE OS ITENS */
+    padding: 64px 80px;
+}
+
+.duvida {
+    position: relative ; /* POSIÇÃO RELATIVA AO BLOCO INÍCIO  */
+}
+
+.duvida h3 {
+    border: 2PX solid #FF725E;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 24px;   
+}
+
+.duvida img {
+    position: absolute;
+    top: 32px;
+    right: 24px;
+}
+
+.duvida .paragrafo {
+    border-right: 1px solid #FF725E;
+    border-bottom: 1px solid #FF725E;
+    border-left: 1px solid #FF725E;
+    border-radius: 0 0 8px 8px;
+    margin-top: -8px;
+    padding: 24px;
+    
+}
+
+footer {
+    background-color: rgba(255, 152, 108, 0.25);
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 64px 80px;
+}
+
+footer img,
+footer .titulo {
+    display: block; /* O TITULO EM "STRONG" POR PADRÃO É DISPLAY INLINE, POR ISSO REDEFINIMOS */
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+footer nav a {
+    color: #263138;
+    display: block; /* EM BLOCO, VERTICAL, QUEBRA DE LINHA   */
+    margin-bottom: 16PX;
+    text-decoration: none;
+}
+
+footer p {
+    margin-bottom: 16PX;
+    max-width: 350px;
+}
+
+footer p a {
+    color: #263138;
+    text-decoration: none;
+}
+
+#copyRight {
+    background-color: #263138;
+    color: #FFFFFF;
+    padding: 24px;
+    text-align: center;
+}
+
+#copyRight a {
+    color: #ff9a6c;
 }
