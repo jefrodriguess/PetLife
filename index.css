@@ -127,8 +127,17 @@ h2 {
     border-left: 1px solid #FF725E;
     border-radius: 0 0 8px 8px;
     margin-top: -8px;
+    padding: 0 24px; /* JS: CONFIG. PARA ESCONDER A CAIXA DE RESPOSTAS*/
+    height: 0; /* II */
+    opacity: 0; /* II */
+    overflow: hidden; /* JS: QUANDO O CONTEUDO SAIR DA BORDA, ESCONDER CONTEUDO   */
+    transition: .3s; /* JS: TEMPO DE TRANSIÇÃO DA AÇÃO    */
+}
+
+.duvida.ativa .paragrafo{
+    height: fit-content;
+    opacity: 1;
     padding: 24px;
-    
 }
 
 footer {
@@ -172,13 +181,4 @@ footer p a {
 
 #copyRight a {
     color: #ff9a6c;
-}
-
-.voltar {
-    color: #FF725E;
-    position: absolute; /* POSIÇÃO ABSOLUTA NA PAGINA  */
-    top: 90%;
-    left: 50%;
-    text-decoration:underline;
-    cursor: pointer;
 }
